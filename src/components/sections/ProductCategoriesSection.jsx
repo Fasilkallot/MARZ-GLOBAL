@@ -12,7 +12,7 @@ export default function ProductCategoriesSection() {
         <SectionTitle
           label="What We Supply"
           title="Our Product Categories"
-          subtitle="From electrical systems to structural materials — we supply everything your industrial project needs, all from one reliable source."
+          subtitle="From electrical materials to specialized wire products — 8 industrial categories available from one trusted UAE supply partner."
           align="center"
         />
 

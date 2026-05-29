@@ -56,7 +56,7 @@ export default function About() {
                     { label: 'Established', value: companyInfo.established },
                     { label: 'Location', value: 'Ajman, UAE' },
                     { label: 'Market', value: 'United Arab Emirates' },
-                    { label: 'Categories', value: '8+ Product Lines' },
+                    { label: 'Categories', value: '8 Product Lines' },
                   ].map((item) => (
                     <div key={item.label} className="bg-light rounded p-4 border border-gray-100">
                       <p className="text-xs text-gray-400 uppercase tracking-wider mb-1 font-semibold">{item.label}</p>

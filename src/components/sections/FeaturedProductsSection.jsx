@@ -6,7 +6,7 @@ import { productCategories } from '../../data/products';
 
 // Featured products — pick 4 visually rich ones
 const featured = productCategories.filter((p) =>
-  ['electrical', 'mechanical', 'timber', 'hardware'].includes(p.id)
+  ['electricals-materials', 'general-supply', 'safety-materials', 'pipes-fittings-valves-flanges'].includes(p.id)
 );
 
 export default function FeaturedProductsSection() {

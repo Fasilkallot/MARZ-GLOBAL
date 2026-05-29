@@ -71,7 +71,7 @@ export default function AboutPreviewSection() {
 
             {/* Floating badge */}
             <div className="absolute -bottom-4 -right-4 bg-secondary text-white rounded-lg px-5 py-4 shadow-xl hidden md:block">
-              <p className="font-heading text-2xl font-bold">8+</p>
+              <p className="font-heading text-2xl font-bold">8</p>
               <p className="text-xs text-white/80">Product Categories</p>
             </div>
 

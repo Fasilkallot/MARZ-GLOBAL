@@ -4,7 +4,7 @@ import { ArrowRight, MessageCircle, Phone, ChevronDown } from 'lucide-react';
 import heroImg from '../../assets/products/general-supply.png';
 
 const stats = [
-  { value: '8+', label: 'Product Categories' },
+  { value: '8', label: 'Product Categories' },
   { value: '5+', label: 'Industries Served' },
   { value: 'UAE', label: 'Nationwide Supply' },
   { value: '2025', label: 'Est. in UAE' },
