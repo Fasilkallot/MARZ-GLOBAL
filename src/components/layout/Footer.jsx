@@ -12,12 +12,14 @@ const footerLinks = {
     { label: 'Contact', path: '/contact' },
   ],
   'Products': [
-    { label: 'Electrical Materials', path: '/products#electrical' },
-    { label: 'Mechanical Materials', path: '/products#mechanical' },
-    { label: 'Civil Materials', path: '/products#civil' },
-    { label: 'Hardware & Safety', path: '/products#hardware' },
-    { label: 'Metal Products', path: '/products#metal' },
-    { label: 'Timber & Wood', path: '/products#timber' },
+    { label: 'Electricals Materials', path: '/products#electricals-materials' },
+    { label: 'General Supply', path: '/products#general-supply' },
+    { label: 'Safety Materials (PPE)', path: '/products#safety-materials' },
+    { label: 'Pipes, Fittings, Valves & Flanges', path: '/products#pipes-fittings-valves-flanges' },
+    { label: 'Walkway Systems', path: '/products#walkway-systems' },
+    { label: 'Woods & Timber', path: '/products#woods-timber' },
+    { label: 'Welding Equipments', path: '/products#welding-equipment' },
+    { label: 'Specialized Wire Products', path: '/products#specialized-wire' },
   ],
 };
 
