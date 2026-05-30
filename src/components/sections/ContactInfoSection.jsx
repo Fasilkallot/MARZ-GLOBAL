@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, MessageCircle, Globe } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 import { companyInfo } from '../../data/companyInfo';
 
 const contactItems = [
@@ -16,13 +16,6 @@ const contactItems = [
     href: `mailto:${companyInfo.email}`,
   },
   {
-    icon: Globe,
-    label: 'Website',
-    value: 'marzglobaluae.com',
-    href: companyInfo.website,
-    external: true,
-  },
-  {
     icon: MapPin,
     label: 'Location',
     value: companyInfo.address,
@@ -34,7 +27,7 @@ export default function ContactInfoSection() {
   return (
     <section className="section-padding bg-white">
       <div className="container-xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {contactItems.map((item, i) => (
             <motion.a
               key={i}
