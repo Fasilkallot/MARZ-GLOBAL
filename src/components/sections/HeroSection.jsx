@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, MessageCircle, Phone, ChevronDown } from 'lucide-react';
+import { ArrowRight, MessageCircle, Phone, Mail, ChevronDown } from 'lucide-react';
 import heroImg from '../../assets/products/general-supply.png';
 
 const stats = [
@@ -91,16 +91,28 @@ export default function HeroSection() {
             </a>
           </motion.div>
 
-          {/* Phone */}
-          <motion.a
-            href="tel:+971558826364"
+          {/* Contact Info */}
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="flex items-center gap-2 text-gray-400 hover:text-secondary transition-colors text-sm"
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8"
           >
-            <Phone size={14} /> +971 55 882 6364
-          </motion.a>
+            <a
+              href="tel:+971558826364"
+              className="flex items-center gap-2.5 text-white/90 hover:text-white transition-colors text-sm font-medium group"
+            >
+              <Phone size={16} className="text-secondary group-hover:scale-110 transition-transform" /> 
+              +971 55 882 6364
+            </a>
+            <a
+              href="mailto:muhammed@marzglobaluae.com"
+              className="flex items-center gap-2.5 text-white/90 hover:text-white transition-colors text-sm font-medium group"
+            >
+              <Mail size={16} className="text-secondary group-hover:scale-110 transition-transform" /> 
+              muhammed@marzglobaluae.com
+            </a>
+          </motion.div>
         </div>
 
         {/* Stats Row */}

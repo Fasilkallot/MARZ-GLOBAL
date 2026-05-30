@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Phone } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone, Mail } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../../assets/logo.png';
 
@@ -40,13 +40,22 @@ export default function Navbar() {
           <span className="flex items-center gap-1.5 opacity-90">
             <span>📍</span> Ajman Free Zone, UAE
           </span>
-          <a
-            href="tel:+971558826364"
-            className="flex items-center gap-1.5 hover:text-secondary transition-colors"
-          >
-            <Phone size={12} />
-            +971 55 882 6364
-          </a>
+          <div className="flex items-center gap-6">
+            <a
+              href="mailto:muhammed@marzglobaluae.com"
+              className="flex items-center gap-1.5 hover:text-secondary transition-colors"
+            >
+              <Mail size={12} />
+              muhammed@marzglobaluae.com
+            </a>
+            <a
+              href="tel:+971558826364"
+              className="flex items-center gap-1.5 hover:text-secondary transition-colors"
+            >
+              <Phone size={12} />
+              +971 55 882 6364
+            </a>
+          </div>
         </div>
       </div>
 
