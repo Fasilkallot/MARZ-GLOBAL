@@ -1,21 +1,49 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Send, Phone, Mail, MapPin, MessageCircle, CheckCircle, Loader } from 'lucide-react';
+import { Send, Phone, Mail, MapPin, MessageCircle, CheckCircle, Loader, AlertCircle } from 'lucide-react';
 import PageBanner from '../../components/layout/PageBanner';
 import { companyInfo } from '../../data/companyInfo';
 
+// ─── CONFIGURATION ────────────────────────────────────────────────────────────
+// Web3Forms sends the email server-side without any backend.
+// 1. Go to https://web3forms.com
+// 2. Enter muhammed@marzglobaluae.com → click "Create Access Key"
+// 3. Replace the key below with your key
+// Until then, the form falls back to a mailto: link that opens the email client.
+const WEB3FORMS_KEY = 'YOUR_WEB3FORMS_KEY';
+const RECIPIENT_EMAIL = 'muhammed@marzglobaluae.com';
+// ──────────────────────────────────────────────────────────────────────────────
+
 const PRODUCT_OPTIONS = [
-  'Electrical Materials',
-  'Mechanical Materials',
-  'Civil Materials',
-  'Hardware & Safety',
-  'Metal Products',
-  'Building Materials',
-  'Timber & Wood',
-  'Instrumentation',
-  'Other / Multiple',
+  'Electricals Materials',
+  'General Supply',
+  'Safety Materials (PPE)',
+  'Pipes, Fittings, Valves & Flanges',
+  'Industrial and Commercial Walkway Systems',
+  'Woods & Timber',
+  'Welding Equipments & Consumables',
+  'Specialized Wire Products',
+  'Other / Multiple Categories',
 ];
+
+const buildMailtoBody = (data) => {
+  return [
+    `QUOTE REQUEST — MARZ GLOBAL UAE`,
+    ``,
+    `Full Name:      ${data.name}`,
+    `Company:        ${data.company || 'Not provided'}`,
+    `Email:          ${data.email}`,
+    `Phone:          ${data.phone || 'Not provided'}`,
+    `Product:        ${data.product || 'Not specified'}`,
+    ``,
+    `Message / Requirements:`,
+    `${data.message}`,
+    ``,
+    `─────────────────────────────────`,
+    `Sent via marzglobaluae.com`,
+  ].join('\n');
+};
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -26,36 +54,67 @@ export default function Contact() {
     product: '',
     message: '',
   });
-  const [status, setStatus] = useState('idle'); // idle | loading | success | error
+  const [status, setStatus] = useState('idle'); // idle | loading | success | mailto | error
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const sendViaMailto = (data) => {
+    const subject = encodeURIComponent(
+      `Quote Request from ${data.name}${data.company ? ` — ${data.company}` : ''}`
+    );
+    const body = encodeURIComponent(buildMailtoBody(data));
+    window.location.href = `mailto:${RECIPIENT_EMAIL}?subject=${subject}&body=${body}`;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('loading');
 
+    // If Web3Forms key is still placeholder, use mailto directly
+    if (WEB3FORMS_KEY === 'YOUR_WEB3FORMS_KEY') {
+      setTimeout(() => {
+        sendViaMailto(formData);
+        setStatus('mailto');
+        setFormData({ name: '', company: '', email: '', phone: '', product: '', message: '' });
+      }, 600);
+      return;
+    }
+
+    // Try Web3Forms (server-side email delivery)
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: 'YOUR_WEB3FORMS_KEY', // Replace with actual key
-          subject: `New Quote Request from ${formData.name} — ${formData.company}`,
+          access_key: WEB3FORMS_KEY,
+          subject: `Quote Request from ${formData.name}${formData.company ? ` — ${formData.company}` : ''}`,
           from_name: 'Marz Global UAE Website',
-          ...formData,
+          replyto: formData.email,
+          name: formData.name,
+          company: formData.company,
+          email: formData.email,
+          phone: formData.phone,
+          product: formData.product,
+          message: formData.message,
         }),
       });
 
-      if (response.ok) {
+      if (res.ok) {
         setStatus('success');
         setFormData({ name: '', company: '', email: '', phone: '', product: '', message: '' });
       } else {
-        setStatus('error');
+        // Web3Forms failed — fall back to mailto
+        sendViaMailto(formData);
+        setStatus('mailto');
+        setFormData({ name: '', company: '', email: '', phone: '', product: '', message: '' });
       }
     } catch {
-      setStatus('error');
+      // Network error — fall back to mailto
+      sendViaMailto(formData);
+      setStatus('mailto');
+      setFormData({ name: '', company: '', email: '', phone: '', product: '', message: '' });
     }
   };
 
@@ -82,7 +141,8 @@ export default function Contact() {
         <section className="section-padding bg-light">
           <div className="container-xl">
             <div className="grid lg:grid-cols-3 gap-8 items-start">
-              {/* Left: Contact Info */}
+
+              {/* ── Left: Contact Info ── */}
               <div className="lg:col-span-1 space-y-4">
                 <div>
                   <span className="section-label">Get In Touch</span>
@@ -94,10 +154,9 @@ export default function Contact() {
                   </p>
                 </div>
 
-                {/* Contact Cards */}
                 {[
                   { icon: Phone, label: 'Phone', value: companyInfo.phone, href: `tel:${companyInfo.phone}` },
-                  { icon: Mail, label: 'Email', value: companyInfo.email, href: `mailto:${companyInfo.email}` },
+                  { icon: Mail,  label: 'Email', value: companyInfo.email, href: `mailto:${companyInfo.email}` },
                   { icon: MapPin, label: 'Location', value: companyInfo.address, href: '#' },
                 ].map((item, i) => (
                   <motion.a
@@ -149,7 +208,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Right: Form */}
+              {/* ── Right: Form ── */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -164,16 +223,54 @@ export default function Contact() {
                     Fill in the form below and we'll get back to you within one business day.
                   </p>
 
-                  {status === 'success' ? (
+                  {/* ── Success state (Web3Forms) ── */}
+                  {status === 'success' && (
                     <div className="text-center py-12">
                       <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
                         <CheckCircle size={32} className="text-green-500" />
                       </div>
                       <h3 className="font-heading text-2xl font-bold text-primary mb-2">Message Sent!</h3>
                       <p className="text-gray-600">Thank you for reaching out. Our team will contact you shortly.</p>
+                      <button
+                        onClick={() => setStatus('idle')}
+                        className="mt-6 text-sm text-secondary hover:underline"
+                      >
+                        Send another message
+                      </button>
                     </div>
-                  ) : (
+                  )}
+
+                  {/* ── Mailto fallback success state ── */}
+                  {status === 'mailto' && (
+                    <div className="text-center py-12">
+                      <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
+                        <Mail size={32} className="text-primary" />
+                      </div>
+                      <h3 className="font-heading text-2xl font-bold text-primary mb-2">Email Client Opened!</h3>
+                      <p className="text-gray-600 max-w-sm mx-auto">
+                        Your email client should have opened with the message pre-filled.
+                        Please click <strong>Send</strong> to submit your quote request to{' '}
+                        <span className="text-primary font-medium">{RECIPIENT_EMAIL}</span>.
+                      </p>
+                      <p className="text-xs text-gray-400 mt-3">
+                        If nothing opened,{' '}
+                        <a href={`mailto:${RECIPIENT_EMAIL}`} className="text-primary hover:underline">
+                          click here to email us directly
+                        </a>.
+                      </p>
+                      <button
+                        onClick={() => setStatus('idle')}
+                        className="mt-6 text-sm text-secondary hover:underline"
+                      >
+                        Go back to form
+                      </button>
+                    </div>
+                  )}
+
+                  {/* ── Form ── */}
+                  {(status === 'idle' || status === 'loading' || status === 'error') && (
                     <form onSubmit={handleSubmit} className="space-y-5" id="contact-form">
+
                       <div className="grid sm:grid-cols-2 gap-5">
                         <div>
                           <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-1.5">
@@ -273,16 +370,27 @@ export default function Contact() {
                       </div>
 
                       {status === 'error' && (
-                        <p className="text-red-500 text-sm bg-red-50 border border-red-200 rounded px-4 py-2.5">
-                          Something went wrong. Please try again or contact us via WhatsApp.
-                        </p>
+                        <div className="flex items-start gap-3 text-red-600 bg-red-50 border border-red-200 rounded px-4 py-3">
+                          <AlertCircle size={16} className="flex-shrink-0 mt-0.5" />
+                          <p className="text-sm">
+                            Something went wrong. Please{' '}
+                            <button
+                              type="button"
+                              onClick={() => sendViaMailto(formData)}
+                              className="underline font-medium hover:text-red-700"
+                            >
+                              click here to email us directly
+                            </button>{' '}
+                            or contact us via WhatsApp.
+                          </p>
+                        </div>
                       )}
 
                       <button
                         type="submit"
                         disabled={status === 'loading'}
-                        className="w-full inline-flex items-center justify-center gap-2 bg-secondary text-white font-semibold px-8 py-3.5 rounded hover:bg-secondary-600 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
                         id="submit-quote-btn"
+                        className="w-full inline-flex items-center justify-center gap-2 bg-secondary text-white font-semibold px-8 py-3.5 rounded hover:bg-secondary-600 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed hover:shadow-lg hover:-translate-y-0.5"
                       >
                         {status === 'loading' ? (
                           <>
@@ -296,6 +404,8 @@ export default function Contact() {
                       </button>
 
                       <p className="text-xs text-gray-400 text-center">
+                        Your message will be sent to{' '}
+                        <span className="text-primary font-medium">{RECIPIENT_EMAIL}</span>.{' '}
                         By submitting, you agree to our{' '}
                         <a href="/privacy-policy" className="text-primary hover:underline">Privacy Policy</a>.
                       </p>
@@ -303,6 +413,7 @@ export default function Contact() {
                   )}
                 </div>
               </motion.div>
+
             </div>
           </div>
         </section>
