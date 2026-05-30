@@ -30,7 +30,7 @@ export default function Footer() {
     <footer className="bg-industrial text-white">
       {/* Main Footer */}
       <div className="container-xl py-14 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.25fr_0.75fr_1fr_1.25fr] gap-10 lg:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-5">
@@ -101,9 +101,9 @@ export default function Footer() {
                   <div className="w-8 h-8 rounded bg-primary/50 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary/20 transition-colors">
                     <Mail size={14} />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs text-gray-500 mb-0.5">Email</p>
-                    <p className="text-sm font-medium break-all">{companyInfo.email}</p>
+                    <p className="text-sm font-medium lg:whitespace-nowrap">{companyInfo.email}</p>
                   </div>
                 </a>
               </li>
