@@ -7,7 +7,7 @@ const stats = [
   { value: '8', label: 'Product Categories' },
   { value: '5+', label: 'Industries Served' },
   { value: 'UAE', label: 'Nationwide Supply' },
-  { value: '2025', label: 'Est. in UAE' },
+  { value: '24h', label: 'Quote Turnaround' },
 ];
 
 export default function HeroSection() {
@@ -62,9 +62,8 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl"
           >
-            Supplying Electrical, Mechanical, Civil, Hardware, Timber and
-            Instrumentation Products for Construction, Oil & Gas, Energy and
-            Infrastructure Projects.
+            Supplying Electricals, Safety, Piping, Walkway Systems, Timber,
+            Welding Equipment and Specialized Wire Products across the UAE.
           </motion.p>
 
           {/* CTAs */}

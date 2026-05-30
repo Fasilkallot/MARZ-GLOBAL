@@ -51,9 +51,8 @@ export default function About() {
                   ))}
                 </div>
 
-                <div className="mt-8 grid grid-cols-2 gap-4">
+                <div className="mt-8 grid grid-cols-3 gap-4">
                   {[
-                    { label: 'Established', value: companyInfo.established },
                     { label: 'Location', value: 'Ajman, UAE' },
                     { label: 'Market', value: 'United Arab Emirates' },
                     { label: 'Categories', value: '8 Product Lines' },
@@ -77,16 +76,11 @@ export default function About() {
                   <div className="relative text-center">
                     <img src={logo} alt="Marz Global" className="w-full max-w-xs mx-auto bg-white rounded px-6 py-4 mb-6" />
                     <p className="text-white/70 text-sm">Ajman Free Zone, UAE</p>
-                    <div className="mt-4 flex items-center justify-center gap-2">
-                      <div className="w-8 h-0.5 bg-secondary" />
-                      <p className="text-secondary text-xs font-semibold tracking-widest uppercase">Est. 2025</p>
-                      <div className="w-8 h-0.5 bg-secondary" />
-                    </div>
                   </div>
                 </div>
                 <div className="absolute -bottom-5 -right-5 bg-secondary text-white rounded px-6 py-4 shadow-xl hidden md:block">
-                  <p className="font-heading text-3xl font-bold">UAE</p>
-                  <p className="text-xs text-white/80">Nationwide Supply</p>
+                  <p className="font-heading text-3xl font-bold">8</p>
+                  <p className="text-xs text-white/80">Product Categories</p>
                 </div>
               </motion.div>
             </div>

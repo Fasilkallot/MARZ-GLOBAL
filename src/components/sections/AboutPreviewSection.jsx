@@ -59,10 +59,11 @@ export default function AboutPreviewSection() {
                 <p className="text-white/80 text-sm leading-relaxed font-body">
                   UAE-Based Industrial Trading Company
                 </p>
-                <div className="mt-4 w-10 h-0.5 bg-secondary mx-auto" />
-                <p className="text-secondary text-xs mt-2 font-semibold tracking-widest uppercase">
-                  Est. 2025
-                </p>
+                <div className="mt-3 flex items-center justify-center gap-2">
+                  <div className="w-6 h-0.5 bg-secondary/60" />
+                  <span className="text-secondary/80 text-xs font-semibold tracking-widest uppercase">Ajman Free Zone</span>
+                  <div className="w-6 h-0.5 bg-secondary/60" />
+                </div>
               </div>
 
               {/* Corner accent */}
@@ -93,20 +94,23 @@ export default function AboutPreviewSection() {
             <div className="space-y-4 text-gray-600 leading-relaxed mb-8">
               <p>
                 Marz Global Trading FZE is a UAE-based trading company
-                specializing in the supply of electrical, mechanical, and civil
-                materials, along with hardware, building materials, timber, and
-                instrumentation products.
+                specializing in the supply of Electricals Materials, General
+                Supply, Safety Materials (PPE), Pipes, Fittings, Valves &amp;
+                Flanges, Industrial Walkway Systems, Woods &amp; Timber,
+                Welding Equipment &amp; Consumables, and Specialized Wire
+                Products.
               </p>
               <p>
-                We support a wide range of industries including civil
-                construction, oil and gas, mining, energy, and infrastructure
-                projects. Through a strong network of reliable suppliers, we
-                deliver quality products that meet international standards.
+                We support key industries including civil construction,
+                oil and gas, mining, energy, and infrastructure projects
+                across the UAE. Through a strong network of reliable
+                suppliers, we deliver quality products meeting international
+                standards.
               </p>
               <p>
-                Committed to efficiency, reliability, and customer satisfaction,
-                we provide tailored solutions and timely delivery to meet the
-                demands of every project.
+                Committed to efficiency, reliability, and customer
+                satisfaction, we provide tailored solutions and timely
+                delivery to meet the demands of every project.
               </p>
             </div>
 
