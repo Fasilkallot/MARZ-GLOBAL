@@ -38,15 +38,15 @@ export default function Navbar() {
       <div className="bg-primary text-white text-xs py-2 hidden md:block">
         <div className="container-xl flex justify-between items-center">
           <span className="flex items-center gap-1.5 opacity-90">
-            <span>📍</span> Ajman Free Zone, UAE
+            <span>📍</span> UAE
           </span>
           <div className="flex items-center gap-6">
             <a
-              href="mailto:muhammed@marzglobaluae.com"
+              href="mailto:sales@marzglobaluae.com"
               className="flex items-center gap-1.5 hover:text-secondary transition-colors"
             >
               <Mail size={12} />
-              muhammed@marzglobaluae.com
+              sales@marzglobaluae.com
             </a>
             <a
               href="tel:+971558826364"

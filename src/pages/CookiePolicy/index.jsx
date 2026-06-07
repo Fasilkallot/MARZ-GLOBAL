@@ -63,7 +63,7 @@ export default function CookiePolicy() {
                 },
                 {
                   title: '7. Contact Us',
-                  content: `If you have questions about our use of cookies, please contact us:\n\nMarz Global Trading FZE\nEmail: muhammed@marzglobaluae.com\nPhone: +971 55 882 6364`,
+                  content: `If you have questions about our use of cookies, please contact us:\n\nMarz Global Trading FZE\nEmail: sales@marzglobaluae.com\nPhone: +971 55 882 6364`,
                 },
               ].map((section) => (
                 <div key={section.title} className="mb-8">

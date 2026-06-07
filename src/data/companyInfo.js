@@ -12,12 +12,12 @@ export const companyInfo = {
     'Committed to efficiency, reliability, and customer satisfaction, we provide tailored solutions and timely delivery to meet the demands of every project.',
   ],
   established: '2025',
-  location: 'Ajman Free Zone, UAE',
+  location: 'UAE',
   website: 'https://marzglobaluae.com',
   phone: '+971 55 882 6364',
   whatsapp: '+971558826364',
-  email: 'muhammed@marzglobaluae.com',
-  address: 'Ajman Free Zone, Ajman, United Arab Emirates',
+  email: 'sales@marzglobaluae.com',
+  address: 'UAE',
   mission:
     'To be the most trusted and reliable industrial material supply partner in the UAE, delivering quality products that meet international standards while maintaining the highest levels of customer satisfaction.',
   vision:

@@ -17,7 +17,7 @@ export default function About() {
         <title>About Us | Marz Global UAE — Industrial Trading Company</title>
         <meta
           name="description"
-          content="Learn about Marz Global Trading FZE — a UAE-based industrial material supply company established in Ajman Free Zone. Committed to quality, reliability, and timely delivery."
+          content="Learn about Marz Global Trading FZE — a UAE-based industrial material supply company. Committed to quality, reliability, and timely delivery."
         />
         <meta property="og:title" content="About Marz Global UAE" />
         <meta property="og:description" content="UAE-based industrial trading company specializing in electrical, mechanical, civil, and instrumentation materials." />
@@ -28,7 +28,7 @@ export default function About() {
         {/* Banner */}
         <PageBanner
           title="About Marz Global UAE"
-          subtitle="A trusted industrial material supply partner, serving the UAE's most demanding projects from our base in Ajman Free Zone."
+          subtitle="A trusted industrial material supply partner, serving the UAE's most demanding projects."
           breadcrumbs={[{ label: 'About Us' }]}
         />
 
@@ -75,7 +75,7 @@ export default function About() {
                   <div className="absolute inset-0 grid-pattern opacity-20" />
                   <div className="relative text-center">
                     <img src={logo} alt="Marz Global" className="w-full max-w-xs mx-auto bg-white rounded px-6 py-4 mb-6" />
-                    <p className="text-white/70 text-sm">Ajman Free Zone, UAE</p>
+                    <p className="text-white/70 text-sm">UAE</p>
                   </div>
                 </div>
                 <div className="absolute -bottom-5 -right-5 bg-secondary text-white rounded px-6 py-4 shadow-xl hidden md:block">

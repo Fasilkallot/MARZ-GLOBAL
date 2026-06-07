@@ -8,11 +8,11 @@ import { companyInfo } from '../../data/companyInfo';
 // ─── CONFIGURATION ────────────────────────────────────────────────────────────
 // Web3Forms sends the email server-side without any backend.
 // 1. Go to https://web3forms.com
-// 2. Enter muhammed@marzglobaluae.com → click "Create Access Key"
+// 2. Enter sales@marzglobaluae.com → click "Create Access Key"
 // 3. Replace the key below with your key
 // Until then, the form falls back to a mailto: link that opens the email client.
-const WEB3FORMS_KEY = 'YOUR_WEB3FORMS_KEY';
-const RECIPIENT_EMAIL = 'muhammed@marzglobaluae.com';
+const WEB3FORMS_KEY = '4fc117c4-ab5f-462a-b5e3-bf7415c683f4';
+const RECIPIENT_EMAIL = 'sales@marzglobaluae.com';
 // ──────────────────────────────────────────────────────────────────────────────
 
 const PRODUCT_OPTIONS = [
@@ -124,7 +124,7 @@ export default function Contact() {
         <title>Contact | Marz Global UAE — Request a Quote</title>
         <meta
           name="description"
-          content="Contact Marz Global Trading FZE for industrial material quotes and inquiries. Phone: +971 55 882 6364 | Email: muhammed@marzglobaluae.com | Ajman Free Zone, UAE."
+          content="Contact Marz Global Trading FZE for industrial material quotes and inquiries. Phone: +971 55 882 6364 | Email: sales@marzglobaluae.com | UAE."
         />
         <meta property="og:title" content="Contact Marz Global UAE" />
         <meta property="og:description" content="Get in touch with our team for industrial material supply quotes and inquiries." />
@@ -155,13 +155,15 @@ export default function Contact() {
                 </div>
 
                 {[
-                  { icon: Phone, label: 'Phone', value: companyInfo.phone, href: `tel:${companyInfo.phone}` },
-                  { icon: Mail,  label: 'Email', value: companyInfo.email, href: `mailto:${companyInfo.email}` },
-                  { icon: MapPin, label: 'Location', value: companyInfo.address, href: '#' },
+                  { icon: Phone, label: 'Phone', value: companyInfo.phone, href: `tel:${companyInfo.phone}`, target: '_self' },
+                  { icon: Mail,  label: 'Email', value: companyInfo.email, href: `mailto:${companyInfo.email}`, target: '_self' },
+                  { icon: MapPin, label: 'Location', value: companyInfo.address, href: 'https://maps.app.goo.gl/M8caYb8m9xZqAhkg8', target: '_blank' },
                 ].map((item, i) => (
                   <motion.a
                     key={i}
                     href={item.href}
+                    target={item.target}
+                    rel={item.target === '_blank' ? 'noopener noreferrer' : undefined}
                     initial={{ opacity: 0, x: -15 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -199,13 +201,18 @@ export default function Contact() {
                 </motion.a>
 
                 {/* Map Placeholder */}
-                <div className="bg-white rounded-lg overflow-hidden border border-gray-100 shadow-sm h-52">
+                <a
+                  href="https://maps.app.goo.gl/M8caYb8m9xZqAhkg8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-white rounded-lg overflow-hidden border border-gray-100 shadow-sm h-52 hover:border-secondary/40 hover:shadow-card transition-all group"
+                >
                   <div className="w-full h-full bg-gradient-to-br from-primary/10 to-primary/5 flex flex-col items-center justify-center gap-2 text-primary">
-                    <MapPin size={32} className="opacity-40" />
-                    <p className="text-sm font-semibold opacity-60">Ajman Free Zone</p>
-                    <p className="text-xs text-gray-400">United Arab Emirates</p>
+                    <MapPin size={32} className="opacity-40 group-hover:opacity-70 group-hover:text-secondary transition-all" />
+                    <p className="text-sm font-semibold opacity-60 group-hover:opacity-90 transition-opacity">UAE</p>
+                    <p className="text-xs text-gray-400">Click to open in Google Maps</p>
                   </div>
-                </div>
+                </a>
               </div>
 
               {/* ── Right: Form ── */}

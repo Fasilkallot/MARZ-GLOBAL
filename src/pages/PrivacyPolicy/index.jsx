@@ -63,11 +63,11 @@ export default function PrivacyPolicy() {
                 },
                 {
                   title: '8. Your Rights',
-                  content: `You have the right to access, correct, or delete your personal information. To exercise these rights, please contact us at muhammed@marzglobaluae.com.`,
+                  content: `You have the right to access, correct, or delete your personal information. To exercise these rights, please contact us at sales@marzglobaluae.com.`,
                 },
                 {
                   title: '9. Contact Us',
-                  content: `If you have questions about this Privacy Policy, please contact us:\n\nMarz Global Trading FZE\nAjman Free Zone, UAE\nEmail: muhammed@marzglobaluae.com\nPhone: +971 55 882 6364`,
+                  content: `If you have questions about this Privacy Policy, please contact us:\n\nMarz Global Trading FZE\nUAE\nEmail: sales@marzglobaluae.com\nPhone: +971 55 882 6364`,
                 },
               ].map((section) => (
                 <div key={section.title} className="mb-8">

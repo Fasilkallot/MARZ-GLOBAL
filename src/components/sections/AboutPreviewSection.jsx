@@ -61,7 +61,7 @@ export default function AboutPreviewSection() {
                 </p>
                 <div className="mt-3 flex items-center justify-center gap-2">
                   <div className="w-6 h-0.5 bg-secondary/60" />
-                  <span className="text-secondary/80 text-xs font-semibold tracking-widest uppercase">Ajman Free Zone</span>
+                  <span className="text-secondary/80 text-xs font-semibold tracking-widest uppercase">UAE</span>
                   <div className="w-6 h-0.5 bg-secondary/60" />
                 </div>
               </div>

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, MessageCircle, Phone, Mail, ChevronDown } from 'lucide-react';
-import heroImg from '../../assets/products/general-supply.png';
+import heroImg from '../../assets/images/hero-background.png';
 
 const stats = [
   { value: '8', label: 'Product Categories' },
@@ -40,7 +40,7 @@ export default function HeroSection() {
             className="inline-flex items-center gap-2 bg-secondary/15 border border-secondary/30 text-secondary text-xs font-semibold px-4 py-2 rounded-full mb-6 tracking-widest uppercase"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
-            Ajman Free Zone, UAE
+            UAE
           </motion.div>
 
           {/* Headline */}
@@ -106,11 +106,11 @@ export default function HeroSection() {
               +971 55 882 6364
             </a>
             <a
-              href="mailto:muhammed@marzglobaluae.com"
+              href="mailto:sales@marzglobaluae.com"
               className="flex items-center gap-2.5 text-white/90 hover:text-white transition-colors text-sm font-medium group"
             >
               <Mail size={16} className="text-secondary group-hover:scale-110 transition-transform" /> 
-              muhammed@marzglobaluae.com
+              sales@marzglobaluae.com
             </a>
           </motion.div>
         </div>
@@ -120,15 +120,15 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl"
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-5 max-w-4xl"
         >
           {stats.map((stat, i) => (
             <div
               key={i}
-              className="bg-white/8 backdrop-blur-sm border border-white/10 rounded p-4 text-center"
+              className="bg-white/8 backdrop-blur-sm border border-white/10 rounded-lg p-6 text-center"
             >
-              <p className="font-heading text-3xl font-bold text-secondary">{stat.value}</p>
-              <p className="text-gray-400 text-xs mt-0.5">{stat.label}</p>
+              <p className="font-heading text-4xl font-bold text-secondary">{stat.value}</p>
+              <p className="text-gray-400 text-sm mt-1">{stat.label}</p>
             </div>
           ))}
         </motion.div>
