@@ -92,21 +92,6 @@ export default function Industries() {
                       />
                     </div>
 
-                    {/* Related Products tags */}
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
-                        <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider mb-2">
-                          Relevant Products
-                        </p>
-                        <div className="flex flex-wrap gap-1.5">
-                          {industry.relevantProducts.map((prod) => (
-                            <span key={prod} className="text-xs bg-primary/8 text-primary font-medium px-2 py-0.5 rounded">
-                              {prod}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
                   </motion.div>
 
                   {/* Content */}

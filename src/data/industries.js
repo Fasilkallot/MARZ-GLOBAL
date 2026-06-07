@@ -1,10 +1,10 @@
 // Industries Data
 
-import electricalsImg from '../assets/products/electricals.png';
-import pipesImg from '../assets/products/pipes.png';
-import generalSupplyImg from '../assets/products/general-supply.png';
-import metalImg from '../assets/products/metal-products.png';
-import walkwayImg from '../assets/products/walkway-systems.png';
+import constructionImg from '../assets/industries/construction.png';
+import oilGasImg from '../assets/industries/oil-gas.png';
+import miningImg from '../assets/industries/mining.png';
+import energyImg from '../assets/industries/energy.png';
+import infrastructureImg from '../assets/industries/infrastructure.png';
 
 export const industries = [
   {
@@ -23,7 +23,7 @@ export const industries = [
       'On-site delivery coordination',
     ],
     relevantProducts: ['Electricals Materials', 'Safety Materials (PPE)', 'Pipes, Fittings, Valves & Flanges', 'General Supply', 'Industrial and Commercial Walkway Systems'],
-    image: generalSupplyImg,
+    image: constructionImg,
     color: '#002E7A',
     bgColor: 'from-blue-950 to-blue-900',
   },
@@ -43,7 +43,7 @@ export const industries = [
       'Corrosion-resistant materials',
     ],
     relevantProducts: ['Pipes, Fittings, Valves & Flanges', 'Electricals Materials', 'Safety Materials (PPE)', 'General Supply'],
-    image: pipesImg,
+    image: oilGasImg,
     color: '#D44E00',
     bgColor: 'from-orange-950 to-gray-900',
   },
@@ -63,7 +63,7 @@ export const industries = [
       'Fasteners and couplings',
     ],
     relevantProducts: ['Industrial and Commercial Walkway Systems', 'General Supply', 'Electricals Materials', 'Safety Materials (PPE)'],
-    image: metalImg,
+    image: miningImg,
     color: '#4A4A4A',
     bgColor: 'from-gray-900 to-gray-800',
   },
@@ -83,7 +83,7 @@ export const industries = [
       'Cable management systems',
     ],
     relevantProducts: ['Electricals Materials', 'Pipes, Fittings, Valves & Flanges', 'General Supply', 'Safety Materials (PPE)'],
-    image: electricalsImg,
+    image: energyImg,
     color: '#002E7A',
     bgColor: 'from-blue-950 to-indigo-900',
   },
@@ -103,7 +103,7 @@ export const industries = [
       'Fasteners, tools, and general supply',
     ],
     relevantProducts: ['Industrial and Commercial Walkway Systems', 'Pipes, Fittings, Valves & Flanges', 'Electricals Materials', 'General Supply', 'Safety Materials (PPE)'],
-    image: walkwayImg,
+    image: infrastructureImg,
     color: '#2B7A3A',
     bgColor: 'from-green-950 to-gray-900',
   },
