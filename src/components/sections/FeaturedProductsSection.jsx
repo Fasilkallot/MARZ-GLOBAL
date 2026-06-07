@@ -31,7 +31,7 @@ export default function FeaturedProductsSection() {
             <img
               src={featured[0].image}
               alt={featured[0].title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-full object-contain bg-white group-hover:scale-105 transition-transform duration-700"
               style={{ minHeight: 320 }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
@@ -72,7 +72,7 @@ export default function FeaturedProductsSection() {
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-contain bg-white group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent" />
                 <div className="absolute inset-0 flex flex-col justify-center p-6">

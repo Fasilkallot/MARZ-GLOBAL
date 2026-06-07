@@ -83,7 +83,7 @@ export default function Products() {
                         <img
                           src={product.image}
                           alt={product.title}
-                          className="w-full h-72 md:h-80 object-cover"
+                          className="w-full h-72 md:h-80 object-contain bg-white"
                         />
                       </div>
                       {/* Category badge */}

@@ -5,9 +5,9 @@ export const companyInfo = {
   brandName: 'Marz Global UAE',
   tagline: 'Trusted Industrial Material Supply Partner in the UAE',
   shortDescription:
-    'Marz Global Trading FZE is a UAE-based trading company specializing in the supply of electrical, mechanical, and civil materials, along with hardware, building materials, timber, and instrumentation products.',
+    'Marz Global FZE is a UAE-based supply company specializing in the supply of electrical, mechanical, and civil materials, along with hardware, building materials, timber, and instrumentation products.',
   fullDescription: [
-    'Marz Global Trading FZE is a UAE-based trading company specializing in the supply of electrical, mechanical, and civil materials, along with hardware, building materials, timber, and instrumentation products.',
+    'Marz Global FZE is a UAE-based supply company specializing in the supply of electrical, mechanical, and civil materials, along with hardware, building materials, timber, and instrumentation products.',
     'We support a wide range of industries, including civil construction, oil and gas, mining, energy, and infrastructure projects. Through a strong network of reliable suppliers, we deliver quality products that meet international standards.',
     'Committed to efficiency, reliability, and customer satisfaction, we provide tailored solutions and timely delivery to meet the demands of every project.',
   ],
@@ -21,7 +21,7 @@ export const companyInfo = {
   mission:
     'To be the most trusted and reliable industrial material supply partner in the UAE, delivering quality products that meet international standards while maintaining the highest levels of customer satisfaction.',
   vision:
-    'To become the leading industrial trading company in the UAE, recognized for our commitment to quality, reliability, and excellence in serving the construction, oil and gas, energy, and infrastructure sectors.',
+    'To become the leading industrial supply company in the UAE, recognized for our commitment to quality, reliability, and excellence in serving the construction, oil and gas, energy, and infrastructure sectors.',
   social: {
     linkedin: '#',
     twitter: '#',

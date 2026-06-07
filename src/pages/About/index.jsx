@@ -20,7 +20,7 @@ export default function About() {
           content="Learn about Marz Global Trading FZE — a UAE-based industrial material supply company. Committed to quality, reliability, and timely delivery."
         />
         <meta property="og:title" content="About Marz Global UAE" />
-        <meta property="og:description" content="UAE-based industrial trading company specializing in electrical, mechanical, civil, and instrumentation materials." />
+        <meta property="og:description" content="UAE-based industrial supply company specializing in electrical, mechanical, civil, and instrumentation materials." />
         <link rel="canonical" href="https://marzglobaluae.com/about" />
       </Helmet>
 

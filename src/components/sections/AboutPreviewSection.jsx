@@ -57,7 +57,7 @@ export default function AboutPreviewSection() {
                   className="w-full max-w-xs mb-6 bg-white rounded px-6 py-4"
                 />
                 <p className="text-white/80 text-sm leading-relaxed font-body">
-                  UAE-Based Industrial Trading Company
+                  UAE-Based Industrial Supply Company
                 </p>
                 <div className="mt-3 flex items-center justify-center gap-2">
                   <div className="w-6 h-0.5 bg-secondary/60" />
@@ -93,7 +93,7 @@ export default function AboutPreviewSection() {
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed mb-8">
               <p>
-                Marz Global Trading FZE is a UAE-based trading company
+                Marz Global FZE is a UAE-based supply company
                 specializing in the supply of Electricals Materials, General
                 Supply, Safety Materials (PPE), Pipes, Fittings, Valves &amp;
                 Flanges, Industrial Walkway Systems, Woods &amp; Timber,
