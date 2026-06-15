@@ -20,7 +20,6 @@ export default function HeroSection() {
           alt="Industrial Supply"
           className="w-full h-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-hero-overlay" />
       </div>
 
       {/* Grid Pattern Overlay */}
