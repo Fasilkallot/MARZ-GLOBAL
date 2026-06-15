@@ -5,7 +5,7 @@ import electricalsImg from '../assets/products/electricals.png';
 import pipesImg from '../assets/products/pipes.png';
 import generalSupplyImg from '../assets/products/general-supply.png';
 import walkwayImg from '../assets/products/walkway-systems.png';
-import safetyImg from '../assets/products/safety-ppe.png';
+import safetyImg from '../assets/products/hvac.png';
 import timberImg from '../assets/products/timber.png';
 import weldingImg from '../assets/products/welding.png';
 import wireImg from '../assets/products/wire-products.png';
@@ -42,10 +42,11 @@ export const productCategories = [
     highlights: [
       'Instrumentation & Testing Materials',
       'Spare Parts',
-      'Pumps and Accessories',
+      'Safety Helmets, Face Shields & Eye Protection',
       'Fasteners & Couplings',
       'Power Tools and Hand Tools',
       'Adhesives & Sealants',
+      'Gloves',
       'All Types of Industrial Machineries & Accessories',
     ],
     image: generalSupplyImg,
