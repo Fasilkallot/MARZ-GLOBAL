@@ -53,20 +53,18 @@ export const productCategories = [
   },
   {
     id: 'safety-materials',
-    title: 'Safety Materials (PPE)',
+    title: 'HVAC Systems & Components',
     icon: 'ShieldCheck',
     shortDescription:
       'Complete personal protective equipment — clothing, helmets, shoes, gloves, eye protection, and safety harnesses.',
     description:
-      'Worker safety is non-negotiable on any project site. Marz Global supplies the full spectrum of Personal Protective Equipment (PPE) to ensure your workforce meets UAE safety regulations and international standards. All products are sourced from certified manufacturers.',
+      'Efficient climate control is essential for commercial, industrial, and residential projects. Marz Global supplies a complete range of HVAC systems, components, and accessories designed to deliver optimal performance, energy efficiency, and indoor air quality. All products are sourced from trusted manufacturers and comply with UAE and international standards.',
     highlights: [
-      'Protective Clothing',
-      'Safety Shoes',
-      'Safety Helmets',
-      'Gloves',
-      'Face Shields',
-      'Eye Protection',
-      'Safety Harness',
+      'Air Conditioning Systems',
+      'Ducting & Accessories',
+      'Ventilation Equipment',
+      'HVAC Spare Parts & Components',
+      'Controls & Automation',
     ],
     image: safetyImg,
     color: '#D44E00',

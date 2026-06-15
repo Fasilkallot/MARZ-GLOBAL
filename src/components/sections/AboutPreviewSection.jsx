@@ -95,7 +95,7 @@ export default function AboutPreviewSection() {
               <p>
                 Marz Global FZE is a UAE-based supply company
                 specializing in the supply of Electricals Materials, General
-                Supply, Safety Materials (PPE), Pipes, Fittings, Valves &amp;
+                Supply, HVAC Systems & Components, Pipes, Fittings, Valves &amp;
                 Flanges, Industrial Walkway Systems, Woods &amp; Timber,
                 Welding Equipment &amp; Consumables, and Specialized Wire
                 Products.

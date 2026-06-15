@@ -14,7 +14,7 @@ const footerLinks = {
   'Products': [
     { label: 'Electricals Materials', path: '/products#electricals-materials' },
     { label: 'General Supply', path: '/products#general-supply' },
-    { label: 'Safety Materials (PPE)', path: '/products#safety-materials' },
+    { label: 'HVAC Systems & Components', path: '/products#safety-materials' },
     { label: 'Pipes, Fittings, Valves & Flanges', path: '/products#pipes-fittings-valves-flanges' },
     { label: 'Walkway Systems', path: '/products#walkway-systems' },
     { label: 'Woods & Timber', path: '/products#woods-timber' },

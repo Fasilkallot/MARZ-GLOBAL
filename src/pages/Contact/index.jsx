@@ -18,7 +18,7 @@ const RECIPIENT_EMAIL = 'sales@marzglobaluae.com';
 const PRODUCT_OPTIONS = [
   'Electricals Materials',
   'General Supply',
-  'Safety Materials (PPE)',
+  'HVAC Systems & Components',
   'Pipes, Fittings, Valves & Flanges',
   'Industrial and Commercial Walkway Systems',
   'Woods & Timber',
