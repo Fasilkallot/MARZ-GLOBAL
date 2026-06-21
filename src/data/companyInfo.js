@@ -7,8 +7,8 @@ export const companyInfo = {
   shortDescription:
     'Marz Global FZE is a UAE-based supply company specializing in the supply of electrical, mechanical, and civil materials, along with hardware, building materials, timber, HVAC, and instrumentation products.',
   fullDescription: [
-    'Marz Global FZE is a UAE-based supply company specializing in the supply of electrical, mechanical, and civil materials, along with hardware, building materials, timber, and instrumentation products.',
-    'We support a wide range of industries, including civil construction, oil and gas, mining, energy, and infrastructure projects. Through a strong network of reliable suppliers, we deliver quality products that meet international standards.',
+    'Marz Global FZE is a UAE-based supply company specializing in the supply of electrical, mechanical, and civil materials, along with hardware, building materials, timber, HVAC, and instrumentation products.',
+    'We support a wide range of industries, including civil construction, oil and gas, mining, energy, marine, and infrastructure projects. Through a strong network of reliable suppliers, we deliver quality products that meet international standards.',
     'Committed to efficiency, reliability, and customer satisfaction, we provide tailored solutions and timely delivery to meet the demands of every project.',
   ],
   established: '2025',
