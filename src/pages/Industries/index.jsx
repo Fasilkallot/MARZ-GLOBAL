@@ -39,7 +39,7 @@ export default function Industries() {
               subtitle="From construction to energy, we supply quality materials that keep the UAE's most important projects moving."
               align="center"
             />
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-4 mb-4">
               {industries.map((ind, i) => {
                 const Icon = Icons[ind.icon] || Icons.Building;
                 return (

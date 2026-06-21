@@ -11,6 +11,7 @@ import weldingImg from '../assets/products/welding.png';
 import wireImg from '../assets/products/wire-products.png';
 
 export const productCategories = [
+  // 1 - Electricals Materials
   {
     id: 'electricals-materials',
     title: 'Electricals Materials',
@@ -31,45 +32,48 @@ export const productCategories = [
     image: electricalsImg,
     color: '#002E7A',
   },
+  // 2 - Specialized Wire Products
   {
-    id: 'general-supply',
-    title: 'General Supply',
-    icon: 'Package',
+    id: 'specialized-wire',
+    title: 'Specialized Wire Products',
+    icon: 'Network',
     shortDescription:
-      'Instrumentation, spare parts, pumps, tools, adhesives, and all types of industrial machinery and accessories.',
+      'Wire mesh, expanded mesh, GI/MS wire mesh, chain link fencing, cable trays, shelving systems, and gabions.',
     description:
-      'Our general supply category covers a wide range of industrial goods required across all project types. From precision instrumentation and testing equipment to power tools, spare parts, and heavy industrial machinery — we are your one-stop supply partner in the UAE.',
+      'Our specialized wire products range serves construction, security, storage, and infrastructure applications. We supply expanded wire mesh, galvanized and mild steel wire mesh, chain link fencing for temporary and permanent use, cable trays, warehouse shelving systems, and gabion baskets for civil engineering projects.',
     highlights: [
-      'Instrumentation & Testing Materials',
-      'Spare Parts',
-      'Safety Helmets, Face Shields & Eye Protection',
-      'Fasteners & Couplings',
-      'Power Tools and Hand Tools',
-      'Adhesives & Sealants',
-      'Chemicals',
-      'All Types of Industrial Machineries & Accessories',
+      'Wire Mesh / Expanded Mesh',
+      'GI/MS Wire Mesh',
+      'Chain Link Fence / Temporary Fencing',
+      'Cable Tray',
+      'Shelving System/Mesh Deck',
+      'Gabions',
     ],
-    image: generalSupplyImg,
-    color: '#1A4A8A',
+    image: wireImg,
+    color: '#4A6B8A',
   },
+  // 3 - Woods & Timber
   {
-    id: 'safety-materials',
-    title: 'HVAC Systems & Components',
-    icon: 'ShieldCheck',
+    id: 'woods-timber',
+    title: 'Woods & Timber',
+    icon: 'TreePine',
     shortDescription:
-      'Complete personal protective equipment — clothing, helmets, shoes, gloves, eye protection, and safety harnesses.',
+      'Construction wood, hardwood, plywood, softwood, African timber, wooden pallets and MDF boards.',
     description:
-      'Efficient climate control is essential for commercial, industrial, and residential projects. Marz Global supplies a complete range of HVAC systems, components, and accessories designed to deliver optimal performance, energy efficiency, and indoor air quality. All products are sourced from trusted manufacturers and comply with UAE and international standards.',
+      'Marz Global supplies a comprehensive range of wood and timber products for construction, fit-out, and industrial applications across the UAE. From structural construction wood and hardwood to plywood, African timber, wooden pallets, and medium density fibre boards — we source quality timber to match every project requirement.',
     highlights: [
-      'Air Conditioning Systems',
-      'Ducting & Accessories',
-      'Ventilation Equipment',
-      'HVAC Spare Parts & Components',
-      'Controls & Automation',
+      'Construction Wood',
+      'Hardwood',
+      'Plywood',
+      'Softwood',
+      'African Timber',
+      'Wooden Pallets',
+      'Medium Density Fibre Boards (MDF)',
     ],
-    image: safetyImg,
-    color: '#D44E00',
+    image: timberImg,
+    color: '#8B4513',
   },
+  // 4 - Pipes, Fittings, Valves & Flanges
   {
     id: 'pipes-fittings-valves-flanges',
     title: 'Pipes, Fittings, Valves & Flanges',
@@ -94,6 +98,7 @@ export const productCategories = [
     image: pipesImg,
     color: '#2B5EA7',
   },
+  // 5 - Industrial and Commercial Walkway Systems
   {
     id: 'walkway-systems',
     title: 'Industrial and Commercial Walkway Systems',
@@ -113,26 +118,26 @@ export const productCategories = [
     image: walkwayImg,
     color: '#3A6B3A',
   },
+  // 6 - HVAC Systems & Components
   {
-    id: 'woods-timber',
-    title: 'Woods & Timber',
-    icon: 'TreePine',
+    id: 'safety-materials',
+    title: 'HVAC Systems & Components',
+    icon: 'ShieldCheck',
     shortDescription:
-      'Construction wood, hardwood, plywood, softwood, African timber, wooden pallets and MDF boards.',
+      'Complete personal protective equipment — clothing, helmets, shoes, gloves, eye protection, and safety harnesses.',
     description:
-      'Marz Global supplies a comprehensive range of wood and timber products for construction, fit-out, and industrial applications across the UAE. From structural construction wood and hardwood to plywood, African timber, wooden pallets, and medium density fibre boards — we source quality timber to match every project requirement.',
+      'Efficient climate control is essential for commercial, industrial, and residential projects. Marz Global supplies a complete range of HVAC systems, components, and accessories designed to deliver optimal performance, energy efficiency, and indoor air quality. All products are sourced from trusted manufacturers and comply with UAE and international standards.',
     highlights: [
-      'Construction Wood',
-      'Hardwood',
-      'Plywood',
-      'Softwood',
-      'African Timber',
-      'Wooden Pallets',
-      'Medium Density Fibre Boards (MDF)',
+      'Air Conditioning Systems',
+      'Ducting & Accessories',
+      'Ventilation Equipment',
+      'HVAC Spare Parts & Components',
+      'Controls & Automation',
     ],
-    image: timberImg,
-    color: '#8B4513',
+    image: safetyImg,
+    color: '#D44E00',
   },
+  // 7 - Welding Equipments & Consumables
   {
     id: 'welding-equipment',
     title: 'Welding Equipments & Consumables',
@@ -152,23 +157,26 @@ export const productCategories = [
     image: weldingImg,
     color: '#C45200',
   },
+  // 8 - General Supply
   {
-    id: 'specialized-wire',
-    title: 'Specialized Wire Products',
-    icon: 'Network',
+    id: 'general-supply',
+    title: 'General Supply',
+    icon: 'Package',
     shortDescription:
-      'Wire mesh, expanded mesh, GI/MS wire mesh, chain link fencing, cable trays, shelving systems, and gabions.',
+      'Instrumentation, spare parts, pumps, tools, adhesives, and all types of industrial machinery and accessories.',
     description:
-      'Our specialized wire products range serves construction, security, storage, and infrastructure applications. We supply expanded wire mesh, galvanized and mild steel wire mesh, chain link fencing for temporary and permanent use, cable trays, warehouse shelving systems, and gabion baskets for civil engineering projects.',
+      'Our general supply category covers a wide range of industrial goods required across all project types. From precision instrumentation and testing equipment to power tools, spare parts, and heavy industrial machinery — we are your one-stop supply partner in the UAE.',
     highlights: [
-      'Wire Mesh / Expanded Mesh',
-      'GI/MS Wire Mesh',
-      'Chain Link Fence / Temporary Fencing',
-      'Cable Tray',
-      'Shelving System/Mesh Deck',
-      'Gabions',
+      'Instrumentation & Testing Materials',
+      'Spare Parts',
+      'Safety Helmets, Face Shields & Eye Protection',
+      'Fasteners & Couplings',
+      'Power Tools and Hand Tools',
+      'Adhesives & Sealants',
+      'Chemicals',
+      'All Types of Industrial Machineries & Accessories',
     ],
-    image: wireImg,
-    color: '#4A6B8A',
+    image: generalSupplyImg,
+    color: '#1A4A8A',
   },
 ];

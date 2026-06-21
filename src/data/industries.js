@@ -5,6 +5,7 @@ import oilGasImg from '../assets/industries/oil-gas.png';
 import miningImg from '../assets/industries/mining.png';
 import energyImg from '../assets/industries/energy.png';
 import infrastructureImg from '../assets/industries/infrastructure.png';
+import marineImg from '../assets/industries/marine.png';
 
 export const industries = [
   {
@@ -106,5 +107,26 @@ export const industries = [
     image: infrastructureImg,
     color: '#2B7A3A',
     bgColor: 'from-green-950 to-gray-900',
+  },
+  {
+    id: 'marine',
+    title: 'Marine',
+    icon: 'Anchor',
+    tagline: 'Powering Performance at Sea',
+    overview:
+      'The marine industry relies on precision, durability, and timely delivery. Marz Global provides trusted supply solutions for shipbuilding, marine engineering, and offshore operations across the UAE and beyond.',
+    capabilities: [
+      'Marine steel plates and profiles',
+      'Pipes, valves, and fittings',
+      'Marine coatings and insulation materials',
+      'Deck and engine equipment',
+      'Electrical and navigation systems',
+      'Safety, firefighting, and life-saving equipment',
+      'On-time delivery for dockyard and offshore projects',
+    ],
+    relevantProducts: ['Pipes, Fittings, Valves \u0026 Flanges', 'Electricals Materials', 'General Supply', 'HVAC Systems \u0026 Components'],
+    image: marineImg,
+    color: '#005F8E',
+    bgColor: 'from-cyan-950 to-blue-900',
   },
 ];
