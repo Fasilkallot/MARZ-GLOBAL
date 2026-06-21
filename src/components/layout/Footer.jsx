@@ -13,13 +13,13 @@ const footerLinks = {
   ],
   'Products': [
     { label: 'Electricals Materials', path: '/products#electricals-materials' },
-    { label: 'General Supply', path: '/products#general-supply' },
-    { label: 'HVAC Systems & Components', path: '/products#safety-materials' },
+    { label: 'Specialized Wire Products', path: '/products#specialized-wire' },
+    { label: 'Woods & Timber', path: '/products#woods-timber' },
     { label: 'Pipes, Fittings, Valves & Flanges', path: '/products#pipes-fittings-valves-flanges' },
     { label: 'Walkway Systems', path: '/products#walkway-systems' },
-    { label: 'Woods & Timber', path: '/products#woods-timber' },
+    { label: 'HVAC Systems & Components', path: '/products#safety-materials' },
     { label: 'Welding Equipments', path: '/products#welding-equipment' },
-    { label: 'Specialized Wire Products', path: '/products#specialized-wire' },
+    { label: 'General Supply', path: '/products#general-supply' },
   ],
 };
 
