@@ -5,9 +5,15 @@ import { companyInfo } from '../../data/companyInfo';
 const contactItems = [
   {
     icon: Phone,
-    label: 'Phone',
+    label: 'Mobile',
     value: companyInfo.phone,
-    href: `tel:${companyInfo.phone}`,
+    href: `tel:${companyInfo.phone.replace(/\s/g, '')}`,
+  },
+  {
+    icon: Phone,
+    label: 'Landline',
+    value: companyInfo.landline,
+    href: `tel:${companyInfo.landline.replace(/\s/g, '')}`,
   },
   {
     icon: Mail,
@@ -27,7 +33,7 @@ export default function ContactInfoSection() {
   return (
     <section className="section-padding bg-white">
       <div className="container-xl">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {contactItems.map((item, i) => (
             <motion.a
               key={i}
@@ -45,7 +51,7 @@ export default function ContactInfoSection() {
               </div>
               <div className="min-w-0">
                 <p className="text-xs text-gray-400 uppercase tracking-wider mb-1 font-semibold">{item.label}</p>
-                <p className="text-sm font-medium text-gray-700 group-hover:text-primary transition-colors break-words">
+                <p className="text-xs font-medium text-gray-700 group-hover:text-primary transition-colors whitespace-nowrap">
                   {item.value}
                 </p>
               </div>

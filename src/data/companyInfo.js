@@ -15,6 +15,7 @@ export const companyInfo = {
   location: 'UAE',
   website: 'https://marzglobaluae.com',
   phone: '+971 55 882 6364',
+  landline: '+971 4 572 1978',
   whatsapp: '+971558826364',
   email: 'sales@marzglobaluae.com',
   address: 'UAE',

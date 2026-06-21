@@ -81,15 +81,29 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href={`tel:${companyInfo.phone}`}
+                  href={`tel:${companyInfo.phone.replace(/\s/g, '')}`}
                   className="flex items-start gap-3 text-gray-300 hover:text-secondary transition-colors group"
                 >
                   <div className="w-8 h-8 rounded bg-primary/50 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary/20 transition-colors">
                     <Phone size={14} />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500 mb-0.5">Phone</p>
+                    <p className="text-xs text-gray-500 mb-0.5">Mobile</p>
                     <p className="text-sm font-medium">{companyInfo.phone}</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`tel:${companyInfo.landline.replace(/\s/g, '')}`}
+                  className="flex items-start gap-3 text-gray-300 hover:text-secondary transition-colors group"
+                >
+                  <div className="w-8 h-8 rounded bg-primary/50 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary/20 transition-colors">
+                    <Phone size={14} />
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-500 mb-0.5">Landline</p>
+                    <p className="text-sm font-medium">{companyInfo.landline}</p>
                   </div>
                 </a>
               </li>

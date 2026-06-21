@@ -67,7 +67,7 @@ export default function PrivacyPolicy() {
                 },
                 {
                   title: '9. Contact Us',
-                  content: `If you have questions about this Privacy Policy, please contact us:\n\nMarz Global Trading FZE\nUAE\nEmail: sales@marzglobaluae.com\nPhone: +971 55 882 6364`,
+                  content: `If you have questions about this Privacy Policy, please contact us:\n\nMarz Global Trading FZE\nUAE\nEmail: sales@marzglobaluae.com\nPhone: +971 55 882 6364\nLandline: +971 4 572 1978`,
                 },
               ].map((section) => (
                 <div key={section.title} className="mb-8">

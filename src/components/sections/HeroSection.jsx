@@ -105,6 +105,13 @@ export default function HeroSection() {
               +971 55 882 6364
             </a>
             <a
+              href="tel:+97145721978"
+              className="flex items-center gap-2.5 text-white/90 hover:text-white transition-colors text-sm font-medium group"
+            >
+              <Phone size={16} className="text-secondary group-hover:scale-110 transition-transform" /> 
+              +971 4 572 1978
+            </a>
+            <a
               href="mailto:sales@marzglobaluae.com"
               className="flex items-center gap-2.5 text-white/90 hover:text-white transition-colors text-sm font-medium group"
             >

@@ -124,7 +124,7 @@ export default function Contact() {
         <title>Contact | Marz Global UAE — Request a Quote</title>
         <meta
           name="description"
-          content="Contact Marz Global Trading FZE for industrial material quotes and inquiries. Phone: +971 55 882 6364 | Email: sales@marzglobaluae.com | UAE."
+          content="Contact Marz Global Trading FZE for industrial material quotes and inquiries. Phone: +971 55 882 6364 | Landline: +971 4 572 1978 | Email: sales@marzglobaluae.com | UAE."
         />
         <meta property="og:title" content="Contact Marz Global UAE" />
         <meta property="og:description" content="Get in touch with our team for industrial material supply quotes and inquiries." />
@@ -155,7 +155,8 @@ export default function Contact() {
                 </div>
 
                 {[
-                  { icon: Phone, label: 'Phone', value: companyInfo.phone, href: `tel:${companyInfo.phone}`, target: '_self' },
+                  { icon: Phone, label: 'Mobile', value: companyInfo.phone, href: `tel:${companyInfo.phone.replace(/\s/g, '')}`, target: '_self' },
+                  { icon: Phone, label: 'Landline', value: companyInfo.landline, href: `tel:${companyInfo.landline.replace(/\s/g, '')}`, target: '_self' },
                   { icon: Mail,  label: 'Email', value: companyInfo.email, href: `mailto:${companyInfo.email}`, target: '_self' },
                   { icon: MapPin, label: 'Location', value: companyInfo.address, href: 'https://maps.app.goo.gl/M8caYb8m9xZqAhkg8', target: '_blank' },
                 ].map((item, i) => (

@@ -55,6 +55,13 @@ export default function Navbar() {
               <Phone size={12} />
               +971 55 882 6364
             </a>
+            <a
+              href="tel:+97145721978"
+              className="flex items-center gap-1.5 hover:text-secondary transition-colors"
+            >
+              <Phone size={12} />
+              +971 4 572 1978
+            </a>
           </div>
         </div>
       </div>
@@ -191,6 +198,12 @@ export default function Navbar() {
                   className="flex items-center justify-center gap-2 text-primary font-medium text-sm py-2"
                 >
                   <Phone size={14} /> +971 55 882 6364
+                </a>
+                <a
+                  href="tel:+97145721978"
+                  className="flex items-center justify-center gap-2 text-primary font-medium text-sm py-2"
+                >
+                  <Phone size={14} /> +971 4 572 1978
                 </a>
               </div>
             </motion.div>
