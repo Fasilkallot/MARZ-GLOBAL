@@ -61,11 +61,10 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled
+        className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
             ? 'bg-white shadow-nav'
             : 'bg-white border-b border-gray-100'
-        }`}
+          }`}
       >
         <div className="container-xl">
           <nav className="flex items-center justify-between h-16 md:h-20">
@@ -74,7 +73,7 @@ export default function Navbar() {
               <img
                 src={logo}
                 alt="Marz Global UAE"
-                className="h-10 md:h-12 w-auto object-contain"
+                className="h-16 md:h-[4.5rem] w-auto object-contain"
               />
             </Link>
 
@@ -86,8 +85,7 @@ export default function Navbar() {
                   to={link.path}
                   end={link.path === '/'}
                   className={({ isActive }) =>
-                    `nav-link font-medium text-sm tracking-wide ${
-                      isActive ? 'text-primary active' : 'text-gray-700'
+                    `nav-link font-medium text-sm tracking-wide ${isActive ? 'text-primary active' : 'text-gray-700'
                     }`
                   }
                 >
@@ -138,7 +136,7 @@ export default function Navbar() {
             >
               {/* Mobile Header */}
               <div className="flex items-center justify-between p-5 border-b border-gray-100">
-                <img src={logo} alt="Marz Global UAE" className="h-9 w-auto" />
+                <img src={logo} alt="Marz Global UAE" className="h-[3.25rem] w-auto" />
                 <button
                   onClick={() => setIsMobileOpen(false)}
                   className="p-2 rounded hover:bg-gray-100"
@@ -160,10 +158,9 @@ export default function Navbar() {
                       to={link.path}
                       end={link.path === '/'}
                       className={({ isActive }) =>
-                        `block px-6 py-4 text-base font-medium border-b border-gray-50 transition-colors ${
-                          isActive
-                            ? 'text-primary bg-blue-50 border-l-4 border-l-secondary pl-5'
-                            : 'text-gray-700 hover:text-primary hover:bg-gray-50'
+                        `block px-6 py-4 text-base font-medium border-b border-gray-50 transition-colors ${isActive
+                          ? 'text-primary bg-blue-50 border-l-4 border-l-secondary pl-5'
+                          : 'text-gray-700 hover:text-primary hover:bg-gray-50'
                         }`
                       }
                     >
