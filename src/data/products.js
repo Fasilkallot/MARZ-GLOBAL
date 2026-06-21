@@ -46,7 +46,7 @@ export const productCategories = [
       'Fasteners & Couplings',
       'Power Tools and Hand Tools',
       'Adhesives & Sealants',
-      'Gloves',
+      'Chemicals',
       'All Types of Industrial Machineries & Accessories',
     ],
     image: generalSupplyImg,
